@@ -1,6 +1,50 @@
 ## **CREANDO UN SERVIDOR HTTP PASO A PASO EN C**
 
 
+## Servidor HTTP simple en C
+
+**Descripción:**
+
+Este README describe un servidor HTTP básico implementado en lenguaje C. El servidor puede escuchar conexiones entrantes en un puerto específico y responder a solicitudes HTTP con un mensaje simple.
+
+**Requisitos:**
+
+* Compilador de C (gcc)
+
+**Instrucciones de uso:**
+
+1. **Compilación:**
+
+```
+gcc -o server server.c -lstdc++
+```
+
+2. **Ejecución:**
+
+```
+./server
+```
+
+3. **Acceso al servidor:**
+
+Abra un navegador web e ingrese la siguiente dirección en la barra de direcciones:
+
+```
+http://localhost:8080
+```
+
+**Explicación del código:**
+
+El código fuente del servidor se encuentra en el archivo `server.c`. El código define una estructura `Server` que contiene la información necesaria para configurar el servidor, como el puerto de escucha, la dirección IP y la función que se ejecutará cuando se inicie el servidor.
+
+La función `main` del programa crea una instancia de la estructura `Server` y configura los parámetros necesarios. Luego, llama a la función `server_constructor` para inicializar el servidor y comenzar a escuchar conexiones entrantes.
+
+Cuando se recibe una conexión entrante, el servidor crea un nuevo hilo para atender la solicitud del cliente. El hilo lee la solicitud del cliente y envía una respuesta simple que contiene un mensaje HTML.
+
+
+## **INSTRUCCIONES PARA EL DESARROLLO DEL SERVIDOR**
+
+
 ## **`server.h:` Cabecera del programa**
 
 **1. Protección de inclusiones múltiples:**
